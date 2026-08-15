@@ -2336,7 +2336,7 @@ a:hover {
   margin: 0;
   color: var(--ink-soft);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
 }
@@ -2590,7 +2590,7 @@ footer {
   }
 
   .education-org {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .education-range {
