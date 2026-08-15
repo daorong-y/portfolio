@@ -695,7 +695,7 @@ export default function Home() {
                 <LightbulbIcon />
               </span>
               <span>
-                I am driven by an interest in advancing higher speed, superior quality, and greater
+                I am driven by an interest in advancing superior quality, higher speed, and greater
                 flexibility in shaping and manufacturing.
               </span>
             </li>
