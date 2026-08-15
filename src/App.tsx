@@ -578,7 +578,7 @@ export default function Home() {
                 <ConservationIcon />
               </span>
               <span>
-                My research interest began in autumn 2012 at the{" "}
+                My interest in research began in autumn 2012 at the{" "}
                 <a
                   className="supervisor-link"
                   href="https://deims.org/9516fa76-79cc-4620-bc27-e721cdaf0db3"
