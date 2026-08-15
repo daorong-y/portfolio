@@ -177,6 +177,17 @@ function ConservationIcon() {
   );
 }
 
+function CollaborationIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="3" />
+      <circle cx="5" cy="7" r="2" />
+      <circle cx="19" cy="7" r="2" />
+      <path d="m7 8.5 3 2.5M17 8.5 14 11M12 15v4M9 20h6" />
+    </svg>
+  );
+}
+
 function SportsIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -401,17 +412,6 @@ export default function Home() {
               </a>{" "}
               from the University of Birmingham, following one year of studying Medicine.
             </p>
-            <div className="body-copy">
-              <p>
-                Driven by an interest in advancing higher speed, superior quality, and greater
-                flexibility in shaping and manufacturing, I aim for my research to deliver
-                tangible benefits to the industry. I work across academic and industrial teams
-                and have led projects involving research institutes, equipment manufacturers and
-                external sponsors. My broader experience includes direct ink writing, solid oxide
-                fuel cells, lithium-ion batteries and multiphysics modelling of fibre-matrix
-                interfaces.
-              </p>
-            </div>
           </div>
         </section>
 
@@ -692,6 +692,17 @@ export default function Home() {
           </div>
 
           <ul className="about-me-list">
+            <li>
+              <span className="about-me-icon">
+                <CollaborationIcon />
+              </span>
+              <span>
+                I&apos;m driven to make manufacturing faster, higher-quality and more adaptable. I
+                lead collaborations across academia and industry, with experience spanning direct
+                ink writing, solid oxide fuel cells, lithium-ion batteries and multiphysics
+                modelling of fibre-matrix interfaces.
+              </span>
+            </li>
             <li>
               <span className="about-me-icon">
                 <ConservationIcon />
