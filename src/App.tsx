@@ -322,7 +322,7 @@ export default function Home() {
               href="#contact"
               onClick={() => trackEvent("schedule_discussion_click")}
             >
-              schedule a discussion
+              schedule a chat
             </a>
           </div>
 
