@@ -125,6 +125,43 @@ function LinkedInIcon() {
   );
 }
 
+function LocationIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 21s6-5.2 6-12a6 6 0 1 0-12 0c0 6.8 6 12 6 12Z" />
+      <circle cx="12" cy="9" r="2" />
+    </svg>
+  );
+}
+
+function ConservationIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19 4C12 4 6 8 6 14c0 3 2 5 5 5 6 0 8-7 8-15Z" />
+      <path d="M5 20c2-5 6-8 11-11" />
+    </svg>
+  );
+}
+
+function InterpersonalIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="9" cy="8" r="3" />
+      <circle cx="17" cy="9" r="2.5" />
+      <path d="M3.5 19c.5-4 2.5-6 5.5-6s5 2 5.5 6M14 14c3-.8 5.4 1 6 4" />
+    </svg>
+  );
+}
+
+function SportsIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8 4h8v4c0 4-2 6-4 6s-4-2-4-6V4Z" />
+      <path d="M8 6H5v2c0 2 1.5 3.5 3.5 3.5M16 6h3v2c0 2-1.5 3.5-3.5 3.5M12 14v4M8 20h8" />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <div className="site-shell">
@@ -161,7 +198,10 @@ export default function Home() {
           <p className="eyebrow">Materials researcher</p>
           <h1>Daorong Ye</h1>
           <p className="role">PhD researcher in advanced ceramics and additive manufacturing</p>
-          <p className="location">Birmingham, United Kingdom</p>
+          <p className="location">
+            <LocationIcon />
+            <span>Birmingham, United Kingdom</span>
+          </p>
         </div>
 
         <div className="profile-links">
@@ -329,7 +369,7 @@ export default function Home() {
               <p className="card-number">01</p>
               <h3>Fused filament fabrication</h3>
               <p>
-                Ceramic-filled thermoplastic filaments engineered for reliable extrusion,
+                Ceramic-filled filaments engineered for reliable extrusion,
                 dimensional control and pressureless densification.
               </p>
             </article>
@@ -363,7 +403,7 @@ export default function Home() {
               <p className="card-number">03</p>
               <h3>Process integration & scale-up</h3>
               <p>
-                Bespoke hardware, controlled debinding, high-temperature processing and
+                Bespoke hardware, controlled debinding, high-temperature co-sintering and
                 multi-technique characterisation connected in one manufacturing workflow.
               </p>
             </article>
@@ -534,24 +574,37 @@ export default function Home() {
 
           <ul className="about-me-list">
             <li>
-              My research interest began in autumn 2012 at the{" "}
-              <a
-                className="supervisor-link"
-                href="https://deims.org/9516fa76-79cc-4620-bc27-e721cdaf0db3"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Beijing Forest Ecosystem Station (BJF, CERN)
-              </a>
-              , analysing root-zone water storage alongside plant scientists as an intern.
-              Environmental conservation is one of my key causes.
+              <span className="about-me-icon">
+                <ConservationIcon />
+              </span>
+              <span>
+                My research interest began in autumn 2012 at the{" "}
+                <a
+                  className="supervisor-link"
+                  href="https://deims.org/9516fa76-79cc-4620-bc27-e721cdaf0db3"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Beijing Forest Ecosystem Station (BJF, CERN)
+                </a>
+                , analysing root-zone water storage alongside plant scientists as an intern.
+                Environmental conservation is one of my key causes.
+              </span>
             </li>
             <li>
-              I am fluent in English and Chinese and love learning other languages.
+              <span className="about-me-icon">
+                <InterpersonalIcon />
+              </span>
+              <span>I am fluent in English and Chinese and love learning other languages.</span>
             </li>
             <li>
-              I am a team member of Edgbaston Hockey Club&apos;s Ladies 5s and enjoy fencing in my
-              spare time.
+              <span className="about-me-icon">
+                <SportsIcon />
+              </span>
+              <span>
+                I am a team member of Edgbaston Hockey Club&apos;s Ladies 5s and enjoy fencing in my
+                spare time.
+              </span>
             </li>
           </ul>
         </section>
