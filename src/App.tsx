@@ -750,7 +750,7 @@ export default function Home() {
 
         <footer>
           <span>© 2026 Daorong Ye</span>
-          <span>curiosity-driven and Evidence-led research</span>
+          <span>Materials innovation · curiosity-driven &amp; evidence-led research · Strategic impact</span>
           <button
             className="analytics-preferences"
             type="button"
