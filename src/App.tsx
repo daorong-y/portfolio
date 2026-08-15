@@ -587,8 +587,8 @@ export default function Home() {
                 >
                   Beijing Forest Ecosystem Station (BJF, CERN)
                 </a>
-                , analysing root-zone water storage alongside plant scientists as an intern.
-                Environmental conservation is one of my key causes.
+                , analysing root-zone water storage alongside botanists and climatologists as an
+                intern. Environmental conservation is one of my key causes.
               </span>
             </li>
             <li>
