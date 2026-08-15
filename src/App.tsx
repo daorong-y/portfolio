@@ -590,7 +590,7 @@ export default function Home() {
               </div>
             </article>
             <article className="timeline-item">
-              <div className="timeline-date">Nov 2023</div>
+              <div className="timeline-date">Mar & Nov 2023</div>
               <div>
                 <h3>Visiting Researcher</h3>
                 <p className="timeline-org">
@@ -603,14 +603,7 @@ export default function Home() {
                   >
                     SMSE
                   </a>
-                </p>
-              </div>
-            </article>
-            <article className="timeline-item">
-              <div className="timeline-date">March 2023</div>
-              <div>
-                <h3>Visiting Researcher</h3>
-                <p className="timeline-org">
+                  {" & "}
                   <a
                     className="supervisor-link"
                     href="https://www.sustech.edu.cn/en/"
