@@ -665,7 +665,7 @@ export default function Home() {
                 <span className="education-dot" aria-hidden="true" />
                 <span>2017</span>
               </div>
-              <h3>MEng, Materials Science and Engineering · First Class Honours</h3>
+              <h3>MEng, Materials Science and Engineering · First&nbsp;Class&nbsp;Honours</h3>
               <p className="education-org">University of Birmingham</p>
               <span className="education-range">2017–2021</span>
             </article>
