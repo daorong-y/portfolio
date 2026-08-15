@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import { disableAnalytics, loadAnalytics, trackEvent } from "./analytics";
+
 const publications = [
   {
     year: "2026",
@@ -194,6 +197,43 @@ function SportsIcon() {
 }
 
 export default function Home() {
+  const [analyticsConsent, setAnalyticsConsent] = useState<"granted" | "denied" | null>(() => {
+    const storedConsent = window.localStorage.getItem("analytics-consent");
+    return storedConsent === "granted" || storedConsent === "denied" ? storedConsent : null;
+  });
+
+  useEffect(() => {
+    if (analyticsConsent !== "granted") return;
+
+    loadAnalytics();
+
+    const viewedSections = new Set<string>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const sectionId = entry.target.id.replaceAll("-", "_");
+          if (entry.isIntersecting && !viewedSections.has(sectionId)) {
+            viewedSections.add(sectionId);
+            trackEvent(`section_view_${sectionId}`);
+          }
+        });
+      },
+      { rootMargin: "-30% 0px -40% 0px", threshold: 0 },
+    );
+
+    document.querySelectorAll<HTMLElement>("main section[id]").forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, [analyticsConsent]);
+
+  function chooseAnalyticsConsent(consent: "granted" | "denied") {
+    window.localStorage.setItem("analytics-consent", consent);
+    setAnalyticsConsent(consent);
+    if (consent === "denied") disableAnalytics();
+  }
+
   return (
     <div className="site-shell">
       <a className="skip-link" href="#main-content">
@@ -236,7 +276,10 @@ export default function Home() {
         </div>
 
         <div className="profile-links">
-          <a href="mailto:dollyyebham@gmail.com">
+          <a
+            href="mailto:dollyyebham@gmail.com"
+            onClick={() => trackEvent("email_click", { link_location: "profile" })}
+          >
             <MailIcon />
             <span>Email</span>
           </a>
@@ -284,7 +327,11 @@ export default function Home() {
             <a className="button primary" href="#publications">
               View publications <ArrowIcon />
             </a>
-            <a className="button text-button" href="#contact">
+            <a
+              className="button text-button"
+              href="#contact"
+              onClick={() => trackEvent("schedule_discussion_click")}
+            >
               schedule a discussion
             </a>
           </div>
@@ -476,6 +523,12 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
                 key={publication.title}
+                onClick={() =>
+                  trackEvent("publication_click", {
+                    publication_title: publication.title,
+                    publication_year: publication.year,
+                  })
+                }
               >
                 <div className={`publication-swatch ${publication.accent}`} aria-hidden="true">
                   <span>{publication.year}</span>
@@ -701,7 +754,11 @@ export default function Home() {
           <p>
             <em>Any questions, please contact:</em>
           </p>
-          <a className="contact-link" href="mailto:dollyyebham@gmail.com">
+          <a
+            className="contact-link"
+            href="mailto:dollyyebham@gmail.com"
+            onClick={() => trackEvent("email_click", { link_location: "contact" })}
+          >
             dollyyebham@gmail.com <ArrowIcon />
           </a>
         </section>
@@ -709,8 +766,39 @@ export default function Home() {
         <footer>
           <span>© 2026 Daorong Ye</span>
           <span>Advanced ceramics · additive manufacturing</span>
+          <button
+            className="analytics-preferences"
+            type="button"
+            onClick={() => setAnalyticsConsent(null)}
+          >
+            Analytics preferences
+          </button>
         </footer>
       </main>
+
+      {analyticsConsent === null && (
+        <aside className="analytics-notice" aria-label="Analytics preferences">
+          <div>
+            <strong>Optional website analytics</strong>
+            <p>
+              With your permission, Google Analytics will measure visits and interactions to help
+              improve this portfolio. It may process usage data and approximate location.
+            </p>
+          </div>
+          <div className="analytics-actions">
+            <button type="button" onClick={() => chooseAnalyticsConsent("denied")}>
+              Decline
+            </button>
+            <button
+              className="analytics-accept"
+              type="button"
+              onClick={() => chooseAnalyticsConsent("granted")}
+            >
+              Accept analytics
+            </button>
+          </div>
+        </aside>
+      )}
     </div>
   );
 }
