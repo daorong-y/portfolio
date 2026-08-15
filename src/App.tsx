@@ -697,10 +697,8 @@ export default function Home() {
                 <CollaborationIcon />
               </span>
               <span>
-                I&apos;m driven to make manufacturing faster, higher-quality and more adaptable. I
-                lead collaborations across academia and industry, with experience spanning direct
-                ink writing, solid oxide fuel cells, lithium-ion batteries and multiphysics
-                modelling of fibre-matrix interfaces.
+                I am driven by an interest in advancing higher speed, superior quality, and greater
+                flexibility in shaping and manufacturing.
               </span>
             </li>
             <li>
