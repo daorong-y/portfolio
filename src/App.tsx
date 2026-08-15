@@ -177,13 +177,11 @@ function ConservationIcon() {
   );
 }
 
-function CollaborationIcon() {
+function LightbulbIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
-      <circle cx="12" cy="12" r="3" />
-      <circle cx="5" cy="7" r="2" />
-      <circle cx="19" cy="7" r="2" />
-      <path d="m7 8.5 3 2.5M17 8.5 14 11M12 15v4M9 20h6" />
+      <path d="M8.5 14.5a6 6 0 1 1 7 0c-1 .8-1.5 1.8-1.5 3h-4c0-1.2-.5-2.2-1.5-3Z" />
+      <path d="M9.5 18h5M10.5 21h3" />
     </svg>
   );
 }
@@ -694,7 +692,7 @@ export default function Home() {
           <ul className="about-me-list">
             <li>
               <span className="about-me-icon">
-                <CollaborationIcon />
+                <LightbulbIcon />
               </span>
               <span>
                 I am driven by an interest in advancing higher speed, superior quality, and greater
