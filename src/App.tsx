@@ -322,7 +322,15 @@ export default function Home() {
               >
                 Prof. Moataz Attallah
               </a>
-              . Previously, I graduated with a First-Class Honours MEng in Materials Engineering
+              . Previously, I graduated with a First-Class Honours MEng in{" "}
+              <a
+                className="supervisor-link"
+                href="https://www.birmingham.ac.uk/study/undergraduate/subjects/materials-science-and-engineering-courses/materials-science-and-engineering-meng"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Materials Science and Engineering
+              </a>{" "}
               from the University of Birmingham, following one year of studying Medicine.
             </p>
             <div className="body-copy">
@@ -552,7 +560,7 @@ export default function Home() {
             <article className="timeline-item">
               <div className="timeline-date">2017 - 2021</div>
               <div>
-                <h3>MEng, Materials Engineering · First Class Honours</h3>
+                <h3>MEng, Materials Science and Engineering · First Class Honours</h3>
                 <p className="timeline-org">University of Birmingham</p>
               </div>
             </article>
