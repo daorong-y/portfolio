@@ -1765,12 +1765,13 @@ body {
 
 .site-shell {
   display: grid;
-  max-width: 1240px;
+  width: 100%;
+  max-width: none;
   min-height: 100vh;
   grid-template-columns: 220px minmax(0, 1fr);
-  gap: 54px;
-  margin: 0 auto;
-  padding: 112px 32px 64px;
+  gap: clamp(32px, 4vw, 72px);
+  margin: 0;
+  padding: 112px clamp(24px, 4vw, 64px) 64px;
 }
 
 .mobile-header {
@@ -1783,7 +1784,7 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
   background: rgba(250, 251, 250, 0.97);
-  padding: 0 max(32px, calc((100vw - 1240px) / 2 + 32px));
+  padding: 0 clamp(24px, 4vw, 64px);
   backdrop-filter: blur(12px);
 }
 
@@ -2277,6 +2278,76 @@ a:hover {
   display: none;
 }
 
+.education-logbook-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  padding: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.education-item {
+  display: grid;
+  min-height: 72px;
+  grid-template-columns: 90px minmax(220px, 1.4fr) minmax(170px, 1fr) max-content;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+
+.education-year {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+}
+
+.education-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border: 1px solid var(--sage);
+  border-radius: 50%;
+}
+
+.education-item.current .education-dot {
+  border-color: var(--moss);
+  background: var(--moss);
+}
+
+.education-item h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.education-org {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.education-range {
+  justify-self: end;
+  color: var(--ink-soft);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
 .contact-section {
   margin-top: 22px;
   overflow: visible;
@@ -2450,6 +2521,11 @@ footer {
   .research-card {
     scroll-snap-align: start;
   }
+
+  .education-item {
+    grid-template-columns: 72px minmax(180px, 1.4fr) minmax(150px, 1fr) max-content;
+    gap: 12px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -2485,5 +2561,37 @@ footer {
   .conference-item,
   .timeline-item {
     grid-template-columns: 1fr;
+  }
+
+  .education-logbook-header {
+    font-size: 9px;
+    letter-spacing: 0.11em;
+  }
+
+  .education-item {
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 4px 12px;
+    padding: 12px 0;
+  }
+
+  .education-year {
+    grid-row: 1 / 4;
+    align-self: start;
+    padding-top: 2px;
+  }
+
+  .education-item h3,
+  .education-org,
+  .education-range {
+    grid-column: 2;
+  }
+
+  .education-org {
+    font-size: 14px;
+  }
+
+  .education-range {
+    justify-self: start;
+    font-size: 10px;
   }
 }
