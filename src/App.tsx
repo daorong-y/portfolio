@@ -177,16 +177,6 @@ function ConservationIcon() {
   );
 }
 
-function InterpersonalIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <circle cx="9" cy="8" r="3" />
-      <circle cx="17" cy="9" r="2.5" />
-      <path d="M3.5 19c.5-4 2.5-6 5.5-6s5 2 5.5 6M14 14c3-.8 5.4 1 6 4" />
-    </svg>
-  );
-}
-
 function SportsIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -725,12 +715,6 @@ export default function Home() {
                 , analysing root-zone water storage alongside botanists and climatologists as an
                 intern. Environmental conservation is one of my key causes.
               </span>
-            </li>
-            <li>
-              <span className="about-me-icon">
-                <InterpersonalIcon />
-              </span>
-              <span>I am fluent in English and Chinese and love learning other languages.</span>
             </li>
             <li>
               <span className="about-me-icon">
