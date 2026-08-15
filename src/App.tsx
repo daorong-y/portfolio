@@ -714,8 +714,7 @@ export default function Home() {
                 >
                   BJF, CERN
                 </a>
-                )
-                , analysing root-zone water storage alongside botanists and climatologists as an
+                ), analysing root-zone water storage alongside botanists and climatologists as an
                 intern. Environmental conservation is one of my key causes.
               </span>
             </li>
