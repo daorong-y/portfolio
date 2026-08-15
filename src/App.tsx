@@ -547,6 +547,22 @@ export default function Home() {
               </div>
             </article>
             <article className="timeline-item">
+              <div className="timeline-date">Nov 2023</div>
+              <div>
+                <h3>Visiting Researcher</h3>
+                <p className="timeline-org">
+                  <a
+                    className="supervisor-link"
+                    href="https://en.smse.sjtu.edu.cn/about/overview"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Shanghai Jiao Tong University · SMSE
+                  </a>
+                </p>
+              </div>
+            </article>
+            <article className="timeline-item">
               <div className="timeline-date">Sep - Nov 2020</div>
               <div>
                 <h3>Multiphysics Simulation Researcher</h3>
