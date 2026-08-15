@@ -2406,6 +2406,7 @@ footer {
 
 .about-me-list {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   max-width: 900px;
   margin: 0;
@@ -2453,6 +2454,10 @@ footer {
 }
 
 @media (max-width: 820px) {
+  .about-me-list {
+    grid-template-columns: 1fr;
+  }
+
   .site-shell {
     display: block;
     padding: 94px 22px 44px;
