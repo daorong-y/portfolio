@@ -1,6 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#061821"/>
-  <path d="M0 16h64M0 32h64M0 48h64M16 0v64M32 0v64M48 0v64" stroke="#75e4d2" stroke-opacity=".12"/>
-  <circle cx="49" cy="15" r="5" fill="#75e4d2"/>
-  <text x="31" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">DY</text>
+  <style>
+    .mark { stroke: #111; }
+    @media (prefers-color-scheme: dark) {
+      .mark { stroke: #fff; }
+    }
+  </style>
+  <g
+    class="mark"
+    fill="none"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M8 12v40h10c10 0 16-8 16-20S28 12 18 12H8Z"/>
+    <path d="m37 12 9 17 10-17M46 29v23"/>
+  </g>
 </svg>
