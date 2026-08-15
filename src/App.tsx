@@ -704,8 +704,8 @@ export default function Home() {
                 <ConservationIcon />
               </span>
               <span>
-                My interest in research began in autumn 2012 at the{" "}
-                Beijing Forest Ecosystem Station (
+                Environmental conservation is one of my key causes. My interest in research began
+                in autumn 2012, when I worked as an intern at the Beijing Forest Ecosystem Station (
                 <a
                   className="supervisor-link"
                   href="https://deims.org/9516fa76-79cc-4620-bc27-e721cdaf0db3"
@@ -714,8 +714,7 @@ export default function Home() {
                 >
                   BJF, CERN
                 </a>
-                ), analysing root-zone water storage alongside botanists and climatologists as an
-                intern. Environmental conservation is one of my key causes.
+                ), analysing root-zone water storage alongside botanists and climatologists.
               </span>
             </li>
             <li>
