@@ -204,7 +204,7 @@ export default function Home() {
               View publications <ArrowIcon />
             </a>
             <a className="button text-button" href="#contact">
-              Discuss a collaboration
+              Schedule a discussion
             </a>
           </div>
 
