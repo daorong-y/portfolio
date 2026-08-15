@@ -2154,55 +2154,53 @@ a:hover {
 
 .research-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .research-card,
 .card-dark,
 .card-clay,
 .card-light {
-  display: grid;
+  display: block;
   min-height: 0;
-  grid-template-columns: 280px minmax(0, 1fr);
-  grid-template-rows: auto auto 1fr;
-  column-gap: 24px;
-  border: 0;
-  border-bottom: 1px solid var(--line);
-  border-radius: 0;
+  border: 1px solid var(--line);
+  border-radius: 3px;
   background: var(--paper);
   box-shadow: none;
   color: var(--ink);
-  padding: 20px 0;
+  padding: 12px;
 }
 
 .research-card:hover {
   transform: none;
-  border-color: var(--line);
+  border-color: var(--moss);
 }
 
 .material-visual {
-  height: 180px;
-  grid-row: 1 / 4;
-  margin: 0;
+  height: 130px;
+  margin: 0 0 12px;
   border: 1px solid var(--line);
   border-radius: 3px;
 }
 
 .research-card h3 {
-  margin-top: 4px;
+  margin: 4px 0 0;
   color: var(--ink);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .research-card > p:last-child {
+  margin-top: 8px;
   color: var(--ink-soft);
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 1.5;
   opacity: 1;
 }
 
 .card-number {
+  margin-bottom: 6px;
   color: var(--moss);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -2438,6 +2436,20 @@ footer {
   .section-pad {
     padding: 26px 0;
   }
+
+  .research-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(240px, 78vw);
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x proximity;
+  }
+
+  .research-card {
+    scroll-snap-align: start;
+  }
 }
 
 @media (max-width: 560px) {
@@ -2461,13 +2473,13 @@ footer {
   }
 
   .material-visual {
-    height: auto;
-    min-height: 180px;
-    margin-bottom: 14px;
+    height: 140px;
+    min-height: 0;
+    margin-bottom: 12px;
   }
 
   .research-image img {
-    height: auto;
+    height: 100%;
   }
 
   .conference-item,
