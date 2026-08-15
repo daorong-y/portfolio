@@ -235,10 +235,20 @@ export default function Home() {
 
       <main id="main-content" className="content" tabIndex={-1}>
         <section id="top" className="hero section-pad">
+          <div className="hero-kicker" aria-label="Research approach">
+            <span>Materials research</span>
+            <span>Scientific inquiry</span>
+            <span>Technology translation</span>
+          </div>
           <h2>
-            Developing new ways to manufacture
-            <span> high-performance composites</span>
+            Researching high-performance composites
+            <span> from material behaviour to future applications.</span>
           </h2>
+          <p className="hero-lede">
+            My work combines ceramic science, additive manufacturing and technology development
+            to investigate complex material systems, generate evidence and identify practical
+            routes towards industrial impact.
+          </p>
           <div className="hero-actions">
             <a className="button primary" href="#publications">
               View publications <ArrowIcon />

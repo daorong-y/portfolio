@@ -1866,12 +1866,28 @@ a:hover {
 }
 
 .hero-kicker {
+  flex-wrap: wrap;
+  gap: 10px;
   color: var(--ink-soft);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
+}
+
+.hero-kicker span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-kicker span + span::before {
+  width: 3px;
+  height: 3px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--moss);
+  content: "";
 }
 
 .hero h2 {
