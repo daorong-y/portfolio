@@ -650,7 +650,6 @@ export default function Home() {
           <div className="timeline-group education-group">
             <div className="education-logbook-header">
               <span>↳ Education · background</span>
-              <span>04 entries</span>
             </div>
             <article className="education-item current">
               <div className="education-year">
