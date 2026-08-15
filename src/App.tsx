@@ -511,7 +511,7 @@ export default function Home() {
             <article className="timeline-item">
               <div className="timeline-date">2014 - 2016</div>
               <div>
-                <h3>A-levels · Physics, Chemistry, Mathematics and Biology</h3>
+                <h3>A-levels</h3>
                 <p className="timeline-org">Ruthin School</p>
               </div>
             </article>
@@ -532,7 +532,7 @@ export default function Home() {
               My research interest began in autumn 2012 at the{" "}
               <a
                 className="supervisor-link"
-                href="https://english.ib.cas.cn/research/system/202505/t20250512_1043424.html"
+                href="https://deims.org/9516fa76-79cc-4620-bc27-e721cdaf0db3"
                 target="_blank"
                 rel="noreferrer"
               >
