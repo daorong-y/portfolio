@@ -234,9 +234,18 @@ export default function Home() {
           </div>
           <div className="about-grid">
             <p className="lead-paragraph">
-              I am a final-year PhD candidate at the University of Birmingham, researching the
-              additive manufacturing of high-temperature continuous fibre-reinforced ceramic
-              matrix composites for demanding applications. I am supervised by{" "}
+              I am a final-year PhD candidate at the{" "}
+              <a
+                className="supervisor-link"
+                href="https://www.birmingham.ac.uk/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                University of Birmingham
+              </a>
+              , researching the additive manufacturing of high-temperature continuous
+              fibre-reinforced ceramic matrix composites for demanding applications. I am
+              supervised by{" "}
               <a
                 className="supervisor-link"
                 href="https://www.birmingham.ac.uk/staff/profiles/metallurgy/binner-jon"
