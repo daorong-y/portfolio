@@ -397,7 +397,7 @@ a {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 76px;
   border-top: 1px solid var(--line);
 }
@@ -424,7 +424,7 @@ a {
   max-width: 160px;
   margin-top: 7px;
   color: var(--ink-soft);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.45;
 }
 
@@ -1913,7 +1913,7 @@ a:hover {
 }
 
 .metrics {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 32px;
   border-top: 1px solid var(--line);
 }
@@ -1938,7 +1938,7 @@ a:hover {
   margin-top: 3px;
   color: var(--ink-soft);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .ruled-section {

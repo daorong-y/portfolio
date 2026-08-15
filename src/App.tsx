@@ -140,7 +140,7 @@ export default function Home() {
           <a href="#about">About</a>
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
-          <a href="#conferences">Conferences</a>
+          <a href="#conferences">Conference presentations</a>
           <a href="#experience">CV</a>
           <a href="#about-me">About me</a>
         </nav>
@@ -184,7 +184,7 @@ export default function Home() {
           <a href="#news">News</a>
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
-          <a href="#conferences">Conferences</a>
+          <a href="#conferences">Conference presentations</a>
           <a href="#experience">Experience</a>
           <a href="#about-me">About me</a>
           <a href="#contact">Contact</a>
@@ -204,7 +204,7 @@ export default function Home() {
               View publications <ArrowIcon />
             </a>
             <a className="button text-button" href="#contact">
-              Schedule a discussion
+              schedule a discussion
             </a>
           </div>
 
@@ -220,10 +220,6 @@ export default function Home() {
             <div>
               <strong>3</strong>
               <span>Interns trained and mentored</span>
-            </div>
-            <div>
-              <strong>2021-26</strong>
-              <span>PhD research programme</span>
             </div>
           </div>
         </section>
@@ -406,7 +402,7 @@ export default function Home() {
             <p className="section-index">05</p>
             <div>
               <p className="eyebrow">Scientific communication</p>
-              <h2>Conferences</h2>
+              <h2>Conference presentations</h2>
             </div>
           </div>
 
