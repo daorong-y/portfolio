@@ -705,14 +705,16 @@ export default function Home() {
               </span>
               <span>
                 My interest in research began in autumn 2012 at the{" "}
+                Beijing Forest Ecosystem Station (
                 <a
                   className="supervisor-link"
                   href="https://deims.org/9516fa76-79cc-4620-bc27-e721cdaf0db3"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Beijing Forest Ecosystem Station (BJF, CERN)
+                  BJF, CERN
                 </a>
+                )
                 , analysing root-zone water storage alongside botanists and climatologists as an
                 intern. Environmental conservation is one of my key causes.
               </span>
