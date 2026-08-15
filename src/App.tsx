@@ -629,7 +629,7 @@ export default function Home() {
                 <h3>Multiphysics Simulation Researcher</h3>
                 <p className="timeline-org">University of Birmingham · Advanced Ceramics Group</p>
                 <p>
-                  Evaluated fibre-matrix interfacial parameters in ultra-high-temperature CMCs
+                  Evaluated fibre-matrix interfacial parameters in ultra-high temperature CMCs
                   and supported impact failure analysis using finite element modelling.
                 </p>
               </div>
