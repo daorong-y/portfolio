@@ -366,7 +366,7 @@ export default function Home() {
             </p>
             <div className="body-copy">
               <p>
-                Driven by a commitment to advancing higher speed, superior quality, and greater
+                Driven by an interest in advancing higher speed, superior quality, and greater
                 flexibility in shaping and manufacturing, I aim for my research to deliver
                 tangible benefits to the industry. I work across academic and industrial teams
                 and have led projects involving research institutes, equipment manufacturers and
