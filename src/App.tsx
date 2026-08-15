@@ -66,7 +66,7 @@ const conferences = [
   {
     year: "2023",
     event: "47th International Conference & Exposition on Advanced Ceramics and Composites",
-    presentation: "Oral Presenter",
+    presentation: "Speech Contributor",
     location: "Daytona Beach, USA",
   },
   {
