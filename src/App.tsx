@@ -594,13 +594,14 @@ export default function Home() {
               <div>
                 <h3>Visiting Researcher</h3>
                 <p className="timeline-org">
+                  Shanghai Jiao Tong University ·{" "}
                   <a
                     className="supervisor-link"
                     href="https://en.smse.sjtu.edu.cn/about/overview"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Shanghai Jiao Tong University · SMSE
+                    SMSE
                   </a>
                 </p>
               </div>
