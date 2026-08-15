@@ -648,34 +648,45 @@ export default function Home() {
           </div>
 
           <div className="timeline-group education-group">
-            <div className="timeline-label">Education</div>
-            <article className="timeline-item">
-              <div className="timeline-date">2021 - 2026</div>
-              <div>
-                <h3>PhD</h3>
-                <p className="timeline-org">University of Birmingham</p>
+            <div className="education-logbook-header">
+              <span>↳ Education · background</span>
+              <span>04 entries</span>
+            </div>
+            <article className="education-item current">
+              <div className="education-year">
+                <span className="education-dot" aria-hidden="true" />
+                <span>2021</span>
               </div>
+              <h3>PhD</h3>
+              <p className="education-org">University of Birmingham</p>
+              <span className="education-range">2021–2026</span>
             </article>
-            <article className="timeline-item">
-              <div className="timeline-date">2017 - 2021</div>
-              <div>
-                <h3>MEng, Materials Science and Engineering · First Class Honours</h3>
-                <p className="timeline-org">University of Birmingham</p>
+            <article className="education-item">
+              <div className="education-year">
+                <span className="education-dot" aria-hidden="true" />
+                <span>2017</span>
               </div>
+              <h3>MEng, Materials Science and Engineering · First Class Honours</h3>
+              <p className="education-org">University of Birmingham</p>
+              <span className="education-range">2017–2021</span>
             </article>
-            <article className="timeline-item">
-              <div className="timeline-date">2016 - 2017</div>
-              <div>
-                <h3>Medicine, MBChB</h3>
-                <p className="timeline-org">University of Birmingham</p>
+            <article className="education-item">
+              <div className="education-year">
+                <span className="education-dot" aria-hidden="true" />
+                <span>2016</span>
               </div>
+              <h3>Medicine, MBChB</h3>
+              <p className="education-org">University of Birmingham</p>
+              <span className="education-range">2016–2017</span>
             </article>
-            <article className="timeline-item">
-              <div className="timeline-date">2014 - 2016</div>
-              <div>
-                <h3>A-levels</h3>
-                <p className="timeline-org">Ruthin School</p>
+            <article className="education-item">
+              <div className="education-year">
+                <span className="education-dot" aria-hidden="true" />
+                <span>2014</span>
               </div>
+              <h3>A-levels</h3>
+              <p className="education-org">Ruthin School</p>
+              <span className="education-range">2014–2016</span>
             </article>
           </div>
         </section>
