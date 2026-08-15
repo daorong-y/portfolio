@@ -538,17 +538,7 @@ export default function Home() {
               <div className="timeline-date">2021 - 2026</div>
               <div>
                 <h3>PhD Researcher</h3>
-                <p className="timeline-org">
-                  University of Birmingham ·{" "}
-                  <a
-                    className="supervisor-link"
-                    href="https://www.birmingham.ac.uk/news-archive/2020/government-funding-helps-advanced-ceramics-take-shape-in-the-midlands"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Advanced Ceramics Group
-                  </a>
-                </p>
+                <p className="timeline-org">University of Birmingham · Advanced Ceramics Group</p>
                 <p>
                   Research on developing 3D printing material systems and a manufacturing
                   technology framework for short and continuous fibre‒reinforced high and
