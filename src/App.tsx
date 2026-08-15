@@ -410,7 +410,7 @@ export default function Home() {
               >
                 Materials Science and Engineering
               </a>{" "}
-              from the University of Birmingham, following one year of studying Medicine.
+              from the University of Birmingham, following one year of studying Medicine at the same institution.
             </p>
           </div>
         </section>
