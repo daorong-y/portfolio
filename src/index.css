@@ -2285,6 +2285,7 @@ a:hover {
   color: var(--ink-soft);
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 11px;
+  font-weight: 700;
   letter-spacing: 0.16em;
   padding: 0 0 12px;
   text-transform: uppercase;
@@ -2307,6 +2308,7 @@ a:hover {
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
+  font-weight: 700;
 }
 
 .education-dot {
@@ -2326,7 +2328,7 @@ a:hover {
   margin: 0;
   color: var(--ink);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -2336,6 +2338,7 @@ a:hover {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-style: normal;
+  font-weight: 700;
 }
 
 .education-range {
@@ -2343,6 +2346,7 @@ a:hover {
   color: var(--ink-soft);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
+  font-weight: 700;
   letter-spacing: 0.04em;
   white-space: nowrap;
 }
