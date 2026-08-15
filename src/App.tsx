@@ -1,0 +1,576 @@
+const publications = [
+  {
+    year: "2026",
+    type: "Research article",
+    title:
+      "Three-dimensional printing of continuous carbon fibre reinforced silicon carbide ceramic matrix composites",
+    authors: "Daorong Ye and Jon Binner",
+    venue: "npj Advanced Manufacturing",
+    href: "https://doi.org/10.1038/s44334-026-00090-z",
+    accent: "carbon",
+  },
+  {
+    year: "2026",
+    type: "Industry feature",
+    title: "Adding to the mix",
+    authors: "Jon Binner and Dolly Ye",
+    venue: "Materials World, IOM3",
+    href: "https://www.iom3.org/resource/adding-to-the-mix.html",
+    accent: "clay",
+  },
+  {
+    year: "2023",
+    type: "Review article",
+    title: "A review on additive manufacturing of ceramic matrix composites",
+    authors: "Jinxing Sun, Daorong Ye, Ji Zou, et al.",
+    venue: "Journal of Materials Science & Technology, 138, 1-16",
+    href: "https://doi.org/10.1016/j.jmst.2022.06.039",
+    accent: "mineral",
+  },
+];
+
+const conferences = [
+  {
+    year: "2026",
+    event: "Advanced Materials Show and the Advanced Ceramics Show",
+    presentation: "Poster Presenter",
+    location: "National Exhibition Centre, UK",
+  },
+  {
+    year: "2026",
+    event: "2nd Ceramic AM Summit",
+    presentation: "Oral Presenter",
+    location: "Freiburg, Germany",
+  },
+  {
+    year: "2025",
+    event: "Young Ceramists Additive Manufacturing Forum",
+    presentation: "Poster Presenter",
+    location: "Toulouse, France",
+  },
+  {
+    year: "2025",
+    event: "1 Day Research Meeting on Advanced Ceramics",
+    presentation: "Invited Speaker",
+    location: "Manufacturing Technology Centre, UK",
+  },
+  {
+    year: "2023",
+    event: "11th International Conference on High Temperature Ceramic Matrix Composites",
+    presentation: "Oral Presenter",
+    location: "Jeju, South Korea",
+  },
+  {
+    year: "2023",
+    event: "47th International Conference & Exposition on Advanced Ceramics and Composites",
+    presentation: "Oral Presenter",
+    location: "Daytona Beach, USA",
+  },
+  {
+    year: "2022",
+    event: "Composite Technology Forum for UK Defence",
+    presentation: "Invited Speaker",
+    location: "National Composite Centre, UK",
+  },
+  {
+    year: "2022",
+    event: "Young Ceramists Additive Manufacturing Forum",
+    presentation: "Poster Presenter",
+    location: "Barcelona, Spain",
+  },
+  {
+    year: "2022",
+    event: "17th ECerS Conference",
+    presentation: "Poster Presenter",
+    location: "Krakow, Poland",
+  },
+];
+
+const news = [
+  {
+    date: "July 2026",
+    text: "Won first place in Product Innovation at the Alan McLelland Poster Competition. Organised industry engagement for the Advanced Ceramics Group at The Advanced Ceramics Show, NEC Birmingham.",
+  },
+  {
+    date: "June 2026",
+    text: "Received grant from DKG, 3DCeram and the JECS Trust.",
+  },
+  {
+    date: "April 2025",
+    text: "Chaired the Hybrid and Emerging Technologies symposium at the European Ceramic Society Additive Manufacturing Forum in France.",
+  },
+];
+
+function ArrowIcon() {
+  return (
+    <svg viewBox="0 0 20 20" aria-hidden="true">
+      <path d="M5 15 15 5M7 5h8v8" />
+    </svg>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 6h16v12H4zM4 7l8 6 8-6" />
+    </svg>
+  );
+}
+
+function LinkedInIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 9v9M6 6.5v.1M10 18v-5.2c0-2.4 4-2.6 4 0V18M10 9v9M18 18v-5.8c0-4.6-4.8-4.4-8-2" />
+    </svg>
+  );
+}
+
+export default function Home() {
+  return (
+    <div className="site-shell">
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
+
+      <header className="mobile-header">
+        <a className="mobile-brand" href="#top" aria-label="Daorong Ye home">
+          Daorong Ye&apos;s Research Portfolio
+        </a>
+        <nav aria-label="Site navigation">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#conferences">Conferences</a>
+          <a href="#experience">CV</a>
+          <a href="#about-me">About me</a>
+        </nav>
+      </header>
+
+      <aside className="profile-rail" aria-label="Profile">
+        <a className="portrait-mark" href="#top" aria-label="Daorong Ye home">
+          <img
+            src="/portfolio/profile-daorong-ye.jpg"
+            alt="Portrait of Daorong Ye"
+            width="800"
+            height="1000"
+            decoding="async"
+          />
+        </a>
+
+        <div className="profile-copy">
+          <p className="eyebrow">Materials researcher</p>
+          <h1>Daorong Ye</h1>
+          <p className="role">PhD researcher in advanced ceramics and additive manufacturing</p>
+          <p className="location">Birmingham, United Kingdom</p>
+        </div>
+
+        <div className="profile-links">
+          <a href="mailto:dollyyebham@gmail.com">
+            <MailIcon />
+            <span>Email</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/daorong-ye-dolly"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LinkedInIcon />
+            <span>LinkedIn</span>
+          </a>
+        </div>
+
+        <nav className="side-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#news">News</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#conferences">Conferences</a>
+          <a href="#experience">Experience</a>
+          <a href="#about-me">About me</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <p className="rail-note">Open to research and industrial collaboration.</p>
+      </aside>
+
+      <main id="main-content" className="content" tabIndex={-1}>
+        <section id="top" className="hero section-pad">
+          <h2>
+            Developing new ways to manufacture
+            <span> high-performance composites</span>
+          </h2>
+          <div className="hero-actions">
+            <a className="button primary" href="#publications">
+              View publications <ArrowIcon />
+            </a>
+            <a className="button text-button" href="#contact">
+              Discuss a collaboration
+            </a>
+          </div>
+
+          <div className="metrics" aria-label="Selected research metrics">
+            <div>
+              <strong>2</strong>
+              <span>Bespoke AM systems commissioned</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span>Industrial development partners</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span>Interns trained and mentored</span>
+            </div>
+            <div>
+              <strong>2021-26</strong>
+              <span>PhD research programme</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="section-pad ruled-section">
+          <div className="section-heading">
+            <p className="section-index">01</p>
+            <div>
+              <p className="eyebrow">About</p>
+              <h2>Research grounded in making.</h2>
+            </div>
+          </div>
+          <div className="about-grid">
+            <p className="lead-paragraph">
+              I am a final-year PhD candidate at the University of Birmingham, researching the
+              additive manufacturing of high-temperature continuous fibre-reinforced ceramic
+              matrix composites for demanding applications. I am supervised by{" "}
+              <a
+                className="supervisor-link"
+                href="https://www.birmingham.ac.uk/staff/profiles/metallurgy/binner-jon"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Prof. Jon Binner
+              </a>
+              ,{" "}
+              <a
+                className="supervisor-link"
+                href="https://www.birmingham.ac.uk/staff/profiles/metallurgy/dancer-claire"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Dr. Claire Dancer
+              </a>
+              , and{" "}
+              <a
+                className="supervisor-link"
+                href="https://www.lboro.ac.uk/departments/materials/staff/moataz-attallah/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Prof. Moataz Attallah
+              </a>
+              . Previously, I graduated with a First-Class Honours MEng in Materials Engineering
+              from the University of Birmingham, following one year of studying Medicine.
+            </p>
+            <div className="body-copy">
+              <p>
+                Driven by a commitment to advancing higher speed, superior quality, and greater
+                flexibility in shaping and manufacturing, I aim for my research to deliver
+                tangible benefits to the industry. I work across academic and industrial teams
+                and have led projects involving research institutes, equipment manufacturers and
+                external sponsors. My broader experience includes direct ink writing, solid oxide
+                fuel cells, lithium-ion batteries and multiphysics modelling of fibre-matrix
+                interfaces.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="news" className="section-pad ruled-section">
+          <div className="section-heading compact-heading">
+            <p className="section-index">02</p>
+            <div>
+              <p className="eyebrow">Recent activity</p>
+              <h2>Recent activities</h2>
+            </div>
+          </div>
+          <div className="news-list">
+            {news.map((item) => (
+              <article className="news-item" key={item.date + item.text}>
+                <time>{item.date}</time>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="research" className="section-pad ruled-section">
+          <div className="section-heading">
+            <p className="section-index">03</p>
+            <div>
+              <p className="eyebrow">Research</p>
+              <h2>From printable feedstocks to structural ceramic matrix composites.</h2>
+            </div>
+          </div>
+
+          <div className="research-grid">
+            <article className="research-card card-dark">
+              <figure className="material-visual research-image">
+                <img
+                  src="/portfolio/filaments.jpg"
+                  alt="Backscattered-electron micrographs of SiC filament cross-sections and a coiled ceramic filament"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <p className="card-number">01</p>
+              <h3>Fused filament fabrication</h3>
+              <p>
+                Ceramic-filled thermoplastic filaments engineered for reliable extrusion,
+                dimensional control and pressureless densification.
+              </p>
+            </article>
+
+            <article className="research-card card-clay">
+              <figure className="material-visual research-image">
+                <img
+                  src="/portfolio/composite-manufacturing.jpg"
+                  alt="Continuous-fibre SiC composite co-printing concept, deposition system and manufactured lattice specimens"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <p className="card-number">02</p>
+              <h3>Continuous fibre CMCs</h3>
+              <p>
+                Simultaneous placement of carbon fibre reinforcement and SiC-based matrix
+                material for complex, directionally reinforced components.
+              </p>
+            </article>
+
+            <article className="research-card card-light">
+              <figure className="material-visual research-image">
+                <img
+                  src="/portfolio/process-integration-scale-up.jpg"
+                  alt="Integrated ceramic-composite feedstock, additive manufacturing, furnace processing and inspection workflow"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <p className="card-number">03</p>
+              <h3>Process integration & scale-up</h3>
+              <p>
+                Bespoke hardware, controlled debinding, high-temperature processing and
+                multi-technique characterisation connected in one manufacturing workflow.
+              </p>
+            </article>
+          </div>
+
+        </section>
+
+        <section id="publications" className="section-pad ruled-section">
+          <div className="section-heading">
+            <p className="section-index">04</p>
+            <div>
+              <p className="eyebrow">Selected work</p>
+              <h2>Publications</h2>
+            </div>
+          </div>
+          <div className="publication-list">
+            {publications.map((publication) => (
+              <a
+                className="publication"
+                href={publication.href}
+                target="_blank"
+                rel="noreferrer"
+                key={publication.title}
+              >
+                <div className={`publication-swatch ${publication.accent}`} aria-hidden="true">
+                  <span>{publication.year}</span>
+                </div>
+                <div className="publication-copy">
+                  <div className="publication-meta">
+                    <span>{publication.type}</span>
+                    <span>{publication.year}</span>
+                  </div>
+                  <h3>{publication.title}</h3>
+                  <p>{publication.authors}</p>
+                  <p className="venue">{publication.venue}</p>
+                </div>
+                <span className="publication-arrow"><ArrowIcon /></span>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section id="conferences" className="section-pad ruled-section">
+          <div className="section-heading">
+            <p className="section-index">05</p>
+            <div>
+              <p className="eyebrow">Scientific communication</p>
+              <h2>Conferences</h2>
+            </div>
+          </div>
+
+          <div className="conference-list">
+            {conferences.map((conference) => (
+              <article
+                className="conference-item"
+                key={conference.year + conference.event + conference.location}
+              >
+                <time>{conference.year}</time>
+                <div className="conference-copy">
+                  <div className="conference-meta">
+                    <strong>{conference.presentation}</strong>
+                    <span>{conference.location}</span>
+                  </div>
+                  <h3>{conference.event}</h3>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="experience" className="section-pad ruled-section">
+          <div className="section-heading">
+            <p className="section-index">06</p>
+            <div>
+              <p className="eyebrow">Curriculum vitae</p>
+              <h2>Research experience & education</h2>
+            </div>
+          </div>
+
+          <div className="timeline-group">
+            <div className="timeline-label">Research Experience</div>
+            <article className="timeline-item">
+              <div className="timeline-date">2021 - 2026</div>
+              <div>
+                <h3>PhD Researcher</h3>
+                <p className="timeline-org">University of Birmingham · Advanced Ceramics Group</p>
+                <p>
+                  Research on developing 3D printing material systems and a manufacturing
+                  technology framework for short and continuous fibre‒reinforced high and
+                  ultra-high temperature ceramic matrix composites for demanding applications.
+                </p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-date">Sep - Nov 2020</div>
+              <div>
+                <h3>Multiphysics Simulation Researcher</h3>
+                <p className="timeline-org">University of Birmingham · Advanced Ceramics Group</p>
+                <p>
+                  Evaluated fibre-matrix interfacial parameters in ultra-high-temperature CMCs
+                  and supported impact failure analysis using finite element modelling.
+                </p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-date">Sep - Dec 2019</div>
+              <div>
+                <h3>Battery Development Researcher</h3>
+                <p className="timeline-org">
+                  <a
+                    className="supervisor-link"
+                    href="https://www.birmingham.ac.uk/research/centres-institutes/energy-storage/energy-materials-group"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Birmingham Energy Materials Group
+                  </a>
+                </p>
+                <p>
+                  Designed lithium-ion battery formation and cycling protocols and performed
+                  electrochemical analysis within an interdisciplinary research team.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div className="timeline-group education-group">
+            <div className="timeline-label">Education</div>
+            <article className="timeline-item">
+              <div className="timeline-date">2021 - 2026</div>
+              <div>
+                <h3>PhD</h3>
+                <p className="timeline-org">University of Birmingham</p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-date">2017 - 2021</div>
+              <div>
+                <h3>MEng, Materials Engineering · First Class Honours</h3>
+                <p className="timeline-org">University of Birmingham</p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-date">2016 - 2017</div>
+              <div>
+                <h3>Medicine, MBChB</h3>
+                <p className="timeline-org">University of Birmingham</p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-date">2014 - 2016</div>
+              <div>
+                <h3>A-levels · Physics, Chemistry, Mathematics and Biology</h3>
+                <p className="timeline-org">Ruthin School</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="about-me" className="section-pad ruled-section">
+          <div className="section-heading">
+            <p className="section-index">07</p>
+            <div>
+              <p className="eyebrow">Personal profile</p>
+              <h2>About me</h2>
+            </div>
+          </div>
+
+          <ul className="about-me-list">
+            <li>
+              My research interest began in autumn 2012 at the{" "}
+              <a
+                className="supervisor-link"
+                href="https://english.ib.cas.cn/research/system/202505/t20250512_1043424.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Beijing Forest Ecosystem Station (BJF, CERN)
+              </a>
+              , analysing root-zone water storage alongside plant scientists as an intern.
+              Environmental conservation is one of my key causes.
+            </li>
+            <li>
+              I am fluent in English and Chinese and love learning other languages.
+            </li>
+            <li>
+              I am a team member of Edgbaston Hockey Club&apos;s Ladies 5s and enjoy fencing in my
+              spare time.
+            </li>
+          </ul>
+        </section>
+
+        <section id="contact" className="contact-section">
+          <p className="eyebrow">Contact</p>
+          <h2>
+            <em>I would love the opportunity to</em>
+            <br />
+            <em>work with you!</em>
+          </h2>
+          <p>
+            <em>Any questions, please contact:</em>
+          </p>
+          <a className="contact-link" href="mailto:dollyyebham@gmail.com">
+            dollyyebham@gmail.com <ArrowIcon />
+          </a>
+        </section>
+
+        <footer>
+          <span>© 2026 Daorong Ye</span>
+          <span>Advanced ceramics · additive manufacturing</span>
+        </footer>
+      </main>
+    </div>
+  );
+}
