@@ -1,17 +1,18 @@
 :root {
-  --ink: #0b1b24;
-  --ink-soft: #536773;
-  --paper: #f3f7f8;
-  --paper-deep: #e7eef1;
+  --ink: #252b2d;
+  --ink-soft: #606a6d;
+  --paper: #fafbfa;
+  --paper-deep: #eef3f3;
   --white: #ffffff;
-  --line: rgba(11, 27, 36, 0.14);
-  --moss: #087e91;
-  --moss-deep: #061821;
-  --clay: #0d93a6;
-  --sand: #c7d6db;
-  --lime: #75e4d2;
-  --cyan-soft: #c9f5ee;
-  --steel: #8aa0ab;
+  --line: #dce3e2;
+  --moss: #356f73;
+  --moss-deep: #356f73;
+  --clay: #356f73;
+  --sand: #dce3e2;
+  --lime: #82988a;
+  --cyan-soft: #eef3f3;
+  --steel: #82988a;
+  --sage: #82988a;
 }
 
 * {
@@ -102,7 +103,7 @@ a {
   background:
     radial-gradient(circle at 28% 24%, rgba(203, 213, 106, 0.62) 0 2px, transparent 3px),
     radial-gradient(circle at 72% 68%, rgba(255, 255, 255, 0.2) 0 3px, transparent 4px),
-    radial-gradient(circle at 68% 26%, rgba(182, 108, 77, 0.8) 0 14px, transparent 15px);
+    radial-gradient(circle at 68% 26%, rgba(130, 152, 138, 0.8) 0 14px, transparent 15px);
   content: "";
 }
 
@@ -283,7 +284,7 @@ a {
   overflow: hidden;
   background:
     radial-gradient(circle at 86% 18%, rgba(203, 213, 106, 0.34), transparent 24%),
-    radial-gradient(circle at 92% 57%, rgba(182, 108, 77, 0.16), transparent 27%),
+    radial-gradient(circle at 92% 57%, rgba(130, 152, 138, 0.16), transparent 27%),
     var(--white);
 }
 
@@ -308,7 +309,7 @@ a {
   right: 45px;
   width: 210px;
   height: 210px;
-  border: 1px solid rgba(182, 108, 77, 0.27);
+  border: 1px solid rgba(130, 152, 138, 0.27);
 }
 
 .hero-kicker {
@@ -329,7 +330,7 @@ a {
   height: 7px;
   border-radius: 50%;
   background: var(--clay);
-  box-shadow: 0 0 0 5px rgba(182, 108, 77, 0.12);
+  box-shadow: 0 0 0 5px rgba(130, 152, 138, 0.12);
 }
 
 .hero h2 {
@@ -883,7 +884,7 @@ footer {
   height: 112px;
   border: 1px solid rgba(117, 228, 210, 0.34);
   border-radius: 18px;
-  background: linear-gradient(145deg, #0b3441, #071f2a);
+  background: linear-gradient(145deg, #356f73, #252b2d);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 27px;
@@ -1232,15 +1233,15 @@ footer {
 }
 
 .publication-swatch.carbon {
-  background: #071f2a;
+  background: #356f73;
 }
 
 .publication-swatch.clay {
-  background: #0d6676;
+  background: #82988a;
 }
 
 .publication-swatch.mineral {
-  background: #527885;
+  background: #606a6d;
 }
 
 .publication h3,
@@ -1365,7 +1366,7 @@ footer {
   background:
     linear-gradient(rgba(255, 255, 255, 0.075) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.075) 1px, transparent 1px),
-    linear-gradient(135deg, #0b7185, #18a9ad);
+    linear-gradient(135deg, #356f73, #82988a);
   background-size: 32px 32px, 32px 32px, auto;
 }
 
@@ -1658,21 +1659,22 @@ footer {
 /* Simple academic portfolio theme */
 
 :root {
-  --ink: #3f4447;
-  --ink-soft: #626b70;
-  --paper: #ffffff;
-  --paper-deep: #f7f9fa;
+  --ink: #252b2d;
+  --ink-soft: #606a6d;
+  --paper: #fafbfa;
+  --paper-deep: #eef3f3;
   --white: #ffffff;
-  --line: #e5e8ea;
-  --moss: #4b9da4;
-  --moss-deep: #2f6f75;
-  --clay: #4b9da4;
-  --lime: #bfe8e7;
+  --line: #dce3e2;
+  --moss: #356f73;
+  --moss-deep: #356f73;
+  --clay: #356f73;
+  --lime: #82988a;
+  --sage: #82988a;
 }
 
 html,
 body {
-  background: #ffffff;
+  background: var(--paper);
 }
 
 body {
@@ -1683,8 +1685,8 @@ body {
 }
 
 ::selection {
-  background: #cdebea;
-  color: #26373a;
+  background: var(--moss);
+  color: #ffffff;
 }
 
 .site-shell {
@@ -1706,7 +1708,7 @@ body {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(250, 251, 250, 0.97);
   padding: 0 max(32px, calc((100vw - 1240px) / 2 + 32px));
   backdrop-filter: blur(12px);
 }
@@ -1717,7 +1719,7 @@ body {
   height: auto;
   border-radius: 0;
   background: transparent;
-  color: #555b5e;
+  color: var(--ink);
   font-size: 16px;
   font-weight: 700;
 }
@@ -1728,7 +1730,7 @@ body {
 }
 
 .mobile-header nav a {
-  color: #666d70;
+  color: var(--ink-soft);
   font-size: 14px;
   font-weight: 400;
 }
@@ -1755,22 +1757,22 @@ a:hover {
 .portrait-mark {
   width: 168px;
   height: 196px;
-  border: 1px solid #dce1e3;
+  border: 1px solid var(--line);
   border-radius: 18px;
   background:
-    linear-gradient(rgba(75, 157, 164, 0.09) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(75, 157, 164, 0.09) 1px, transparent 1px),
-    #eef5f6;
+    linear-gradient(rgba(53, 111, 115, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(53, 111, 115, 0.08) 1px, transparent 1px),
+    var(--paper-deep);
   background-size: 22px 22px;
   box-shadow: none;
-  color: #3d777d;
+  color: var(--moss);
   font-size: 34px;
 }
 
 .portrait-mark::before {
   background:
     radial-gradient(circle at 72% 24%, var(--moss) 0 5px, transparent 6px),
-    linear-gradient(36deg, transparent 48%, rgba(75, 157, 164, 0.32) 49% 51%, transparent 52%);
+    linear-gradient(36deg, transparent 48%, rgba(53, 111, 115, 0.3) 49% 51%, transparent 52%);
 }
 
 .portrait-mark:has(img)::before {
@@ -1786,7 +1788,7 @@ a:hover {
 }
 
 .portrait-orbit {
-  border-color: rgba(75, 157, 164, 0.28);
+  border-color: rgba(53, 111, 115, 0.28);
 }
 
 .profile-copy {
@@ -1798,7 +1800,7 @@ a:hover {
 }
 
 .profile-copy h1 {
-  color: #44494c;
+  color: var(--ink);
   font-size: 17px;
   font-weight: 700;
   letter-spacing: 0;
@@ -1854,7 +1856,7 @@ a:hover {
   min-height: auto;
   overflow: visible;
   border: 0;
-  background: #ffffff;
+  background: var(--paper);
   color: var(--ink);
   padding-top: 0;
 }
@@ -1893,7 +1895,7 @@ a:hover {
 .hero h2 {
   max-width: 780px;
   margin: 15px 0 0;
-  color: #383d40;
+  color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(32px, 4.1vw, 48px);
   font-weight: 700;
@@ -1933,12 +1935,12 @@ a:hover {
 }
 
 .button.primary:hover {
-  background: #eef7f7;
+  background: var(--paper-deep);
   color: var(--moss-deep);
 }
 
 .hero .text-button {
-  border-bottom-color: #aeb7ba;
+  border-bottom-color: var(--sage);
   color: var(--ink-soft);
 }
 
@@ -1959,7 +1961,7 @@ a:hover {
 }
 
 .metrics strong {
-  color: #4c5558;
+  color: var(--ink);
   font-size: 20px;
   font-weight: 700;
 }
@@ -1982,7 +1984,7 @@ a:hover {
 #conferences,
 #experience,
 #about-me {
-  background: #ffffff;
+  background: var(--paper);
   color: var(--ink);
 }
 
@@ -2001,7 +2003,7 @@ a:hover {
   max-width: none;
   margin: 0;
   border-bottom: 1px solid var(--line);
-  color: #454a4d;
+  color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
   font-weight: 700;
@@ -2025,7 +2027,7 @@ a:hover {
 
 .lead-paragraph {
   margin: 0 0 12px;
-  color: #4d5558;
+  color: var(--ink-soft);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -2035,7 +2037,7 @@ a:hover {
 
 .supervisor-link {
   color: var(--moss-deep);
-  border-bottom: 1px solid rgba(47, 111, 117, 0.35);
+  border-bottom: 1px solid rgba(53, 111, 115, 0.35);
   font-weight: 600;
   transition: color 160ms ease, border-color 160ms ease;
 }
@@ -2047,7 +2049,7 @@ a:hover {
 }
 
 .body-copy {
-  color: #4d5558;
+  color: var(--ink-soft);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -2064,14 +2066,14 @@ a:hover {
 .news-item {
   grid-template-columns: 92px minmax(0, 1fr);
   gap: 14px;
-  border-bottom: 1px dotted #dfe3e5;
+  border-bottom: 1px dotted var(--line);
   padding: 8px 0;
 }
 
 .news-item time,
 .timeline-date,
 .conference-item time {
-  color: #748084;
+  color: var(--moss);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
 }
@@ -2094,7 +2096,7 @@ a:hover {
   border: 0;
   border-bottom: 1px solid var(--line);
   border-radius: 0;
-  background: #ffffff;
+  background: var(--paper);
   box-shadow: none;
   color: var(--ink);
   padding: 20px 0;
@@ -2109,13 +2111,13 @@ a:hover {
   height: 180px;
   grid-row: 1 / 4;
   margin: 0;
-  border: 1px solid #e0e4e6;
+  border: 1px solid var(--line);
   border-radius: 3px;
 }
 
 .research-card h3 {
   margin-top: 4px;
-  color: #41474a;
+  color: var(--ink);
   font-size: 18px;
   font-weight: 700;
 }
@@ -2139,7 +2141,7 @@ a:hover {
 
 .publication:hover,
 .conference-item:hover {
-  background: #f8fbfb;
+  background: var(--paper-deep);
   padding-right: 8px;
   padding-left: 8px;
 }
@@ -2188,8 +2190,8 @@ a:hover {
 }
 
 .timeline-label {
-  border-bottom: 1px solid #cfd5d7;
-  color: #4c5356;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
   font-size: 11px;
 }
 
@@ -2206,9 +2208,9 @@ a:hover {
 .contact-section {
   margin-top: 22px;
   overflow: visible;
-  border: 1px solid #dbe8e9;
+  border: 1px solid var(--line);
   border-radius: 3px;
-  background: #f6fbfb;
+  background: var(--paper-deep);
   color: var(--ink);
   padding: 24px;
 }
@@ -2224,7 +2226,7 @@ a:hover {
 .contact-section h2 {
   max-width: 760px;
   margin-top: 10px;
-  color: #41484b;
+  color: var(--ink);
   font-size: clamp(27px, 3.5vw, 38px);
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -2251,8 +2253,8 @@ a:hover {
 footer {
   margin-top: 24px;
   border-top: 1px solid var(--line);
-  background: #ffffff;
-  color: #858d90;
+  background: var(--paper);
+  color: var(--ink-soft);
   padding: 18px 0;
 }
 
@@ -2273,7 +2275,7 @@ footer {
   padding: 16px 20px;
   border: 1px solid var(--line);
   border-radius: 3px;
-  background: #f8fbfb;
+  background: var(--paper-deep);
   color: var(--ink-soft);
   font-size: 14px;
   line-height: 1.7;
@@ -2288,10 +2290,10 @@ footer {
   width: 28px;
   height: 28px;
   place-items: center;
-  border: 1px solid rgba(47, 111, 117, 0.24);
+  border: 1px solid rgba(130, 152, 138, 0.42);
   border-radius: 50%;
-  background: #ffffff;
-  color: var(--moss-deep);
+  background: var(--paper);
+  color: var(--moss);
 }
 
 .about-me-icon svg {
