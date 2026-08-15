@@ -2284,7 +2284,7 @@ a:hover {
   border-bottom: 1px solid var(--line);
   color: var(--ink-soft);
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.16em;
   padding: 0 0 12px;
   text-transform: uppercase;
@@ -2563,7 +2563,7 @@ footer {
   }
 
   .education-logbook-header {
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 0.11em;
   }
 
