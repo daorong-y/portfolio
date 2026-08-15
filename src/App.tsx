@@ -750,7 +750,7 @@ export default function Home() {
 
         <footer>
           <span>© 2026 Daorong Ye</span>
-          <span>Advanced ceramics · additive manufacturing</span>
+          <span>Materials innovation · Evidence-led inquiry · Strategic impact</span>
           <button
             className="analytics-preferences"
             type="button"
