@@ -89,15 +89,46 @@ const conferences = [
 const news = [
   {
     date: "July 2026",
-    text: "Won first place in Product Innovation at the Alan McLelland Poster Competition. Organised industry engagement for the Advanced Ceramics Group at The Advanced Ceramics Show, NEC Birmingham.",
+    content: (
+      <>
+        Won first place in Product Innovation at the{" "}
+        <a
+          className="supervisor-link"
+          href="https://micg.org.uk/winners-announced-in-alan-mclelland-poster-competition/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Alan McLelland Poster Competition
+        </a>
+        . Organised industry engagement for the Advanced Ceramics Group at The Advanced Ceramics
+        Show, NEC Birmingham.
+      </>
+    ),
   },
   {
     date: "June 2026",
-    text: "Received grant from DKG, 3DCeram and the JECS Trust.",
+    content: (
+      <>
+        Received grant from{" "}
+        <a className="supervisor-link" href="https://www.dkg.de/en" target="_blank" rel="noreferrer">
+          DKG
+        </a>
+        ,{" "}
+        <a className="supervisor-link" href="https://3dceram.com/" target="_blank" rel="noreferrer">
+          3DCeram
+        </a>{" "}
+        and the{" "}
+        <a className="supervisor-link" href="https://www.jecstrust.org/" target="_blank" rel="noreferrer">
+          JECS Trust
+        </a>
+        .
+      </>
+    ),
   },
   {
     date: "April 2025",
-    text: "Chaired the Hybrid and Emerging Technologies symposium at the European Ceramic Society Additive Manufacturing Forum in France.",
+    content:
+      "Chaired the Hybrid and Emerging Technologies symposium at the European Ceramic Society Additive Manufacturing Forum in France.",
   },
 ];
 
@@ -357,9 +388,9 @@ export default function Home() {
           </div>
           <div className="news-list">
             {news.map((item) => (
-              <article className="news-item" key={item.date + item.text}>
+              <article className="news-item" key={item.date}>
                 <time>{item.date}</time>
-                <p>{item.text}</p>
+                <p>{item.content}</p>
               </article>
             ))}
           </div>
