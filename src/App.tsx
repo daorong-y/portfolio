@@ -245,8 +245,8 @@ export default function Home() {
         </a>
         <nav aria-label="Site navigation">
           <a href="#news">Activities</a>
-          <a href="#research">Research</a>
           <a href="#publications">Publications</a>
+          <a href="#research">Research</a>
           <a href="#conferences">Conference presentations</a>
           <a href="#experience">CV</a>
           <a href="#about-me">About me</a>
@@ -295,8 +295,8 @@ export default function Home() {
         <nav className="side-nav" aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#news">News</a>
-          <a href="#research">Research</a>
           <a href="#publications">Publications</a>
+          <a href="#research">Research</a>
           <a href="#conferences">Conference presentations</a>
           <a href="#experience">Experience</a>
           <a href="#about-me">About me</a>
@@ -431,9 +431,50 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="research" className="section-pad ruled-section">
+        <section id="publications" className="section-pad ruled-section">
           <div className="section-heading">
             <p className="section-index">03</p>
+            <div>
+              <p className="eyebrow">Selected work</p>
+              <h2>Publications</h2>
+            </div>
+          </div>
+          <div className="publication-list">
+            {publications.map((publication) => (
+              <a
+                className="publication"
+                href={publication.href}
+                target="_blank"
+                rel="noreferrer"
+                key={publication.title}
+                onClick={() =>
+                  trackEvent("publication_click", {
+                    publication_title: publication.title,
+                    publication_year: publication.year,
+                  })
+                }
+              >
+                <div className={`publication-swatch ${publication.accent}`} aria-hidden="true">
+                  <span>{publication.year}</span>
+                </div>
+                <div className="publication-copy">
+                  <div className="publication-meta">
+                    <span>{publication.type}</span>
+                    <span>{publication.year}</span>
+                  </div>
+                  <h3>{publication.title}</h3>
+                  <p>{publication.authors}</p>
+                  <p className="venue">{publication.venue}</p>
+                </div>
+                <span className="publication-arrow"><ArrowIcon /></span>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section id="research" className="section-pad ruled-section">
+          <div className="section-heading">
+            <p className="section-index">04</p>
             <div>
               <p className="eyebrow">Research</p>
               <h2>From printable feedstocks to structural ceramic matrix composites.</h2>
@@ -493,47 +534,6 @@ export default function Home() {
             </article>
           </div>
 
-        </section>
-
-        <section id="publications" className="section-pad ruled-section">
-          <div className="section-heading">
-            <p className="section-index">04</p>
-            <div>
-              <p className="eyebrow">Selected work</p>
-              <h2>Publications</h2>
-            </div>
-          </div>
-          <div className="publication-list">
-            {publications.map((publication) => (
-              <a
-                className="publication"
-                href={publication.href}
-                target="_blank"
-                rel="noreferrer"
-                key={publication.title}
-                onClick={() =>
-                  trackEvent("publication_click", {
-                    publication_title: publication.title,
-                    publication_year: publication.year,
-                  })
-                }
-              >
-                <div className={`publication-swatch ${publication.accent}`} aria-hidden="true">
-                  <span>{publication.year}</span>
-                </div>
-                <div className="publication-copy">
-                  <div className="publication-meta">
-                    <span>{publication.type}</span>
-                    <span>{publication.year}</span>
-                  </div>
-                  <h3>{publication.title}</h3>
-                  <p>{publication.authors}</p>
-                  <p className="venue">{publication.venue}</p>
-                </div>
-                <span className="publication-arrow"><ArrowIcon /></span>
-              </a>
-            ))}
-          </div>
         </section>
 
         <section id="conferences" className="section-pad ruled-section">
