@@ -174,7 +174,7 @@ export default function Home() {
           Daorong Ye&apos;s Research Portfolio
         </a>
         <nav aria-label="Site navigation">
-          <a href="#about">About</a>
+          <a href="#news">Activities</a>
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
           <a href="#conferences">Conference presentations</a>
