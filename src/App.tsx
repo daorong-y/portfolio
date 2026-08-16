@@ -700,16 +700,7 @@ export default function Home() {
           </div>
 
           <ul className="about-me-list">
-            <li>
-              <span className="about-me-icon">
-                <LightbulbIcon />
-              </span>
-              <span>
-                I am driven by an interest in advancing superior quality, higher speed, and greater
-                flexibility in shaping and manufacturing.
-              </span>
-            </li>
-            <li>
+            
               <span className="about-me-icon">
                 <ConservationIcon />
               </span>
