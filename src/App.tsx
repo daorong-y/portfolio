@@ -700,7 +700,6 @@ export default function Home() {
           </div>
 
           <ul className="about-me-list">
-            
               <span className="about-me-icon">
                 <ConservationIcon />
               </span>
