@@ -11,6 +11,9 @@ const publications = [
     venue: "npj Advanced Manufacturing",
     href: "https://doi.org/10.1038/s44334-026-00090-z",
     accent: "carbon",
+    image: "/portfolio/composite-manufacturing.jpg",
+    imageAlt:
+      "Continuous-fibre SiC composite co-printing concept, deposition system and manufactured lattice specimens",
   },
   {
     year: "2026",
@@ -20,6 +23,9 @@ const publications = [
     venue: "Materials World, IOM3",
     href: "https://www.iom3.org/resource/adding-to-the-mix.html",
     accent: "clay",
+    image: "/portfolio/filaments.jpg",
+    imageAlt:
+      "Backscattered-electron micrographs of SiC filament cross-sections and a coiled ceramic filament",
   },
   {
     year: "2023",
@@ -240,13 +246,12 @@ export default function Home() {
       </a>
 
       <header className="mobile-header">
-        <a className="mobile-brand" href="#top" aria-label="Daorong Ye home">
-          Daorong Ye&apos;s Research Portfolio
+        <a className="mobile-brand" href="#top" aria-label="Dolly home">
+          Dolly&apos;s Research Portfolio
         </a>
         <nav aria-label="Site navigation">
           <a href="#news">Activities</a>
           <a href="#publications">Publications</a>
-          <a href="#research">Research</a>
           <a href="#conferences">Conference presentations</a>
           <a href="#experience">CV</a>
           <a href="#about-me">About me</a>
@@ -296,7 +301,6 @@ export default function Home() {
           <a href="#about">About</a>
           <a href="#news">News</a>
           <a href="#publications">Publications</a>
-          <a href="#research">Research</a>
           <a href="#conferences">Conference presentations</a>
           <a href="#experience">Experience</a>
           <a href="#about-me">About me</a>
@@ -330,8 +334,9 @@ export default function Home() {
               className="button text-button"
               href="#contact"
               onClick={() => trackEvent("schedule_discussion_click")}
+              aria-label="Schedule a chat — cold coffee chat, break the ice"
             >
-              schedule a chat
+              schedule a chat <span aria-hidden="true">☕🧊</span>
             </a>
           </div>
 
@@ -454,7 +459,20 @@ export default function Home() {
                   })
                 }
               >
-                <div className={`publication-swatch ${publication.accent}`} aria-hidden="true">
+                <div
+                  className={`publication-swatch ${publication.accent}`}
+                  style={publication.image ? { padding: 0, alignItems: "stretch" } : undefined}
+                  aria-hidden={publication.image ? undefined : true}
+                >
+                  {publication.image ? (
+                    <img
+                      src={publication.image}
+                      alt={publication.imageAlt}
+                      loading="lazy"
+                      decoding="async"
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  ) : null}
                   <span>{publication.year}</span>
                 </div>
                 <div className="publication-copy">
@@ -472,73 +490,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="research" className="section-pad ruled-section">
-          <div className="section-heading">
-            <p className="section-index">04</p>
-            <div>
-              <p className="eyebrow">Research</p>
-              <h2>From printable feedstocks to structural ceramic matrix composites.</h2>
-            </div>
-          </div>
-
-          <div className="research-grid">
-            <article className="research-card card-dark">
-              <figure className="material-visual research-image">
-                <img
-                  src="/portfolio/filaments.jpg"
-                  alt="Backscattered-electron micrographs of SiC filament cross-sections and a coiled ceramic filament"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <p className="card-number">01</p>
-              <h3>Fused filament fabrication</h3>
-              <p>
-                Ceramic-filled filaments engineered for reliable extrusion,
-                dimensional control and pressureless densification.
-              </p>
-            </article>
-
-            <article className="research-card card-clay">
-              <figure className="material-visual research-image">
-                <img
-                  src="/portfolio/composite-manufacturing.jpg"
-                  alt="Continuous-fibre SiC composite co-printing concept, deposition system and manufactured lattice specimens"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <p className="card-number">02</p>
-              <h3>Continuous fibre CMCs</h3>
-              <p>
-                Simultaneous placement of carbon fibre reinforcement and SiC-based matrix
-                material for complex, directionally reinforced components.
-              </p>
-            </article>
-
-            <article className="research-card card-light">
-              <figure className="material-visual research-image">
-                <img
-                  src="/portfolio/process-integration-scale-up.jpg"
-                  alt="Integrated ceramic-composite feedstock, additive manufacturing, furnace processing and inspection workflow"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <p className="card-number">03</p>
-              <h3>Process integration & scale-up</h3>
-              <p>
-                Bespoke hardware, controlled debinding, high-temperature co-sintering and
-                multi-technique characterisation connected in one manufacturing workflow.
-              </p>
-            </article>
-          </div>
-
-        </section>
-
         <section id="conferences" className="section-pad ruled-section">
           <div className="section-heading">
-            <p className="section-index">05</p>
+            <p className="section-index">04</p>
             <div>
               <p className="eyebrow">Scientific communication</p>
               <h2>Conference presentations</h2>
@@ -566,7 +520,7 @@ export default function Home() {
 
         <section id="experience" className="section-pad ruled-section">
           <div className="section-heading">
-            <p className="section-index">06</p>
+            <p className="section-index">05</p>
             <div>
               <p className="eyebrow">Curriculum vitae</p>
               <h2>Research experience & education</h2>
@@ -692,7 +646,7 @@ export default function Home() {
 
         <section id="about-me" className="section-pad ruled-section">
           <div className="section-heading">
-            <p className="section-index">07</p>
+            <p className="section-index">06</p>
             <div>
               <p className="eyebrow">Personal profile</p>
               <h2>About me</h2>
@@ -700,6 +654,7 @@ export default function Home() {
           </div>
 
           <ul className="about-me-list">
+            <li>
               <span className="about-me-icon">
                 <ConservationIcon />
               </span>
@@ -714,7 +669,7 @@ export default function Home() {
                 >
                   BJF, CERN
                 </a>
-                ), analysing root-zone water storage alongside botanists and climatologists.
+                ), analysing root-zone water storage alongside botanists.
               </span>
             </li>
             <li>
