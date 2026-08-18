@@ -118,7 +118,7 @@ const news = [
     date: "June 2026",
     content: (
       <>
-        Received grant from{" "}
+        Received travel grant from{" "}
         <a className="supervisor-link" href="https://www.dkg.de/en" target="_blank" rel="noreferrer">
           DKG
         </a>
