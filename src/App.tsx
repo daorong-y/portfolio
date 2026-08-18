@@ -99,20 +99,19 @@ const news = [
   {
     date: "July 2026",
     content: (
-      <>
-        Won first place in Product Innovation at the{" "} hosted during the Advanced Ceramics Show, NEC, Birmingham.
-        <a
-          className="supervisor-link"
-          href="https://micg.org.uk/winners-announced-in-alan-mclelland-poster-competition/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Alan McLelland Poster Competition
-        </a>
-      </>
-    ),
-  },
-  {
+  <>
+    Won first place in Product Innovation at the{" "}
+    <a
+      className="supervisor-link"
+      href="https://micg.org.uk/winners-announced-in-alan-mclelland-poster-competition/"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Alan McLelland Poster Competition
+    </a>
+    , hosted during the Advanced Ceramics Show, NEC, Birmingham.
+  </>
+),
     date: "June 2026",
     content: (
       <>
