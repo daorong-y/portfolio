@@ -542,20 +542,10 @@ export default function Home() {
               </div>
             </article>
             <article className="timeline-item">
-              <div className="timeline-date">Mar & Nov 2023</div>
+              <div className="timeline-date">Apr - Nov 2023</div>
               <div>
                 <h3>Visiting Researcher</h3>
                 <p className="timeline-org">
-                  Shanghai Jiao Tong University ·{" "}
-                  <a
-                    className="supervisor-link"
-                    href="https://en.smse.sjtu.edu.cn/about/overview"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    SMSE
-                  </a>
-                  {" & "}
                   <a
                     className="supervisor-link"
                     href="https://www.sustech.edu.cn/en/"
@@ -564,7 +554,15 @@ export default function Home() {
                   >
                     SUSTech
                   </a>{" "}
-                  · Department of Mechanical and Energy Engineering
+                  · Department of Mechanical and Energy Engineering & Shanghai Jiao Tong University ·{" "}
+                  <a
+                    className="supervisor-link"
+                    href="https://en.smse.sjtu.edu.cn/about/overview"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    SMSE
+                  </a>
                 </p>
               </div>
             </article>
