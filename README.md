@@ -44,3 +44,5 @@ Add a custom domain under **Settings > Pages > Custom domain**. GitHub will show
 ## Privacy note
 
 The website includes the email address and LinkedIn profile already shown on the published portfolio. It does not include a phone number or a downloadable copy of the original CV.
+
+<!-- Deployment refresh: 2026-08-18 -->
