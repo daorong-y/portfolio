@@ -110,10 +110,12 @@ const news = [
       Alan McLelland Poster Competition
     </a>
     , hosted during the Advanced Ceramics Show, NEC, Birmingham.
-  </>
-),
-    date: "June 2026",
-    content: (
+   </>
+  ),
+},
+{
+  date: "June 2026",
+  content: (
       <>
         Received travel grant from{" "}
         <a className="supervisor-link" href="https://www.dkg.de/en" target="_blank" rel="noreferrer">
