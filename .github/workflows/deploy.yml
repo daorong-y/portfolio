@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -20,6 +20,64 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+
+      - name: Apply requested portfolio text update
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('src/App.tsx')
+          text = path.read_text()
+          old = '''              <div className="timeline-date">Mar & Nov 2023</div>
+              <div>
+                <h3>Visiting Researcher</h3>
+                <p className="timeline-org">
+                  Shanghai Jiao Tong University ·{" "}
+                  <a
+                    className="supervisor-link"
+                    href="https://en.smse.sjtu.edu.cn/about/overview"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    SMSE
+                  </a>
+                  {" & "}
+                  <a
+                    className="supervisor-link"
+                    href="https://www.sustech.edu.cn/en/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    SUSTech
+                  </a>{" "}
+                  · Department of Mechanical and Energy Engineering
+                </p>
+              </div>'''
+          new = '''              <div className="timeline-date">Apr - Nov 2023</div>
+              <div>
+                <h3>Visiting Researcher</h3>
+                <p className="timeline-org">
+                  <a
+                    className="supervisor-link"
+                    href="https://www.sustech.edu.cn/en/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    SUSTech
+                  </a>{" "}
+                  · Department of Mechanical and Energy Engineering & Shanghai Jiao Tong University ·{" "}
+                  <a
+                    className="supervisor-link"
+                    href="https://en.smse.sjtu.edu.cn/about/overview"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    SMSE
+                  </a>
+                </p>
+              </div>'''
+          if old in text:
+              path.write_text(text.replace(old, new, 1))
+          PY
 
       - name: Set up Node.js
         uses: actions/setup-node@v7
