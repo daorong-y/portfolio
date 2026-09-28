@@ -1,4 +1,4 @@
-name: Deploy portfolio to GitHub Pages
+name: Publish portfolio
 
 on:
   push:
@@ -15,39 +15,44 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v6
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build website
-        run: npm run build
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload website artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./dist
-
-  deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - uses: actions/checkout@v6
+      - name: Prepare website
+        run: |
+          python3 - <<'PY'
+          import base64
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import shutil
+
+          source = Path('website/index.html')
+          output = Path('_site')
+          output.mkdir(exist_ok=True)
+          shutil.copyfile(source, output / 'index.html')
+          (output / '.nojekyll').touch()
+
+          class Images(HTMLParser):
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  name = attrs.get('data-asset')
+                  data = attrs.get('src', '')
+                  if tag == 'link' and attrs.get('rel') == 'icon':
+                      name, data = 'favicon.svg', attrs.get('href', '')
+                  if name and data.startswith('data:'):
+                      name = Path(name).name
+                      (output / name).write_bytes(base64.b64decode(data.split(',', 1)[1]))
+
+          Images().feed(source.read_text())
+          PY
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
